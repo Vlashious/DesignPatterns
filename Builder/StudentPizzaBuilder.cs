@@ -4,16 +4,17 @@ namespace Builder
 {
     class StudentPizzaBuilder : IPizzaBuilder
     {
-        private StudentPizzaBuilder _pizza;
+        private Pizza _pizza;
 
         public void Reset()
         {
-            _pizza = new StudentPizzaBuilder();
+            _pizza = new Pizza();
         }
 
         public void AddDough()
         {
             Console.WriteLine("Dough added.");
+            _pizza.AddAtribute("Dough");
         }
 
         public void AddTomatoSauce()
@@ -24,6 +25,7 @@ namespace Builder
         public void AddMeat()
         {
             Console.WriteLine("Meat added.");
+            _pizza.AddAtribute("Meat");
         }
 
         public void AddMozarella()
@@ -34,9 +36,10 @@ namespace Builder
         public void AddKetchup()
         {
             Console.WriteLine("Ketchup added.");
+            _pizza.AddAtribute("Ketchup");
         }
 
-        public StudentPizzaBuilder GetResult()
+        public Pizza GetResult()
         {
             return _pizza;
         }
