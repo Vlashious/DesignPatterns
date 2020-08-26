@@ -13,6 +13,7 @@ namespace Memento
             origin.State = "Don't.";
 
             origin.SetMemento(caretaker.Memento);
+
         }
     }
 }
